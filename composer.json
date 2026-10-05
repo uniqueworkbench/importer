@@ -1,0 +1,25 @@
+{
+    "name": "uniqueworkbench/importer",
+    "description": "Spreadsheet/CSV import wizard for Unique Workbench apps: heading matching, column and value mapping, preview and run",
+    "type": "library",
+    "version": "0.1.0",
+    "require": {
+        "php": "^8.3",
+        "laravel/framework": "^12.0"
+    },
+    "suggest": {
+        "ext-zip": "Needed to read .xlsx files (CSV works without it)"
+    },
+    "autoload": {
+        "psr-4": {
+            "UniqueWorkbench\\Importer\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "UniqueWorkbench\\Importer\\ImporterServiceProvider"
+            ]
+        }
+    }
+}

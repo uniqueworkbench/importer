@@ -25,6 +25,14 @@ final class RowOutcome
         self::ERROR => 'Error',
     ];
 
+    /** "10 new", "1 error", "3 errors": a count of rows with an action, for summaries (only Error is a noun) */
+    public static function countLabel(string $action, int $count): string
+    {
+        $label = mb_strtolower(self::ACTIONS[$action] ?? $action);
+
+        return number_format($count) . ' ' . ($action === self::ERROR ? \Illuminate\Support\Str::plural($label, $count) : $label);
+    }
+
     public function __construct(
         public readonly string $action,
         public readonly string $record = '',

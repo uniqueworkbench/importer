@@ -2,7 +2,7 @@
     "name": "uniqueworkbench/importer",
     "description": "Spreadsheet/CSV import wizard for Unique Workbench apps: heading matching, column and value mapping, preview and run",
     "type": "library",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "require": {
         "php": "^8.3",
         "laravel/framework": "^12.0"

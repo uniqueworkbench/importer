@@ -19,7 +19,7 @@
     </x-slot>
 
     <div class="py-4">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
             <div class="flex flex-wrap items-end justify-between gap-4">
                 <div class="min-w-0">
                     <h1 class="text-2xl font-bold tracking-tight text-zinc-900">{{ $context->title() }}</h1>

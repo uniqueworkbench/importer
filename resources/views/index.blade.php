@@ -68,7 +68,7 @@
                                 {{ ($targets[$run->target] ?? null)?->label() ?? ucfirst((string) $run->target) }} · {{ number_format($run->row_count) }} {{ Str::plural('row', $run->row_count) }}
                                 · {{ $run->created_at->diffForHumans() }}
                                 @if ($run->counts)
-                                    · @foreach ($run->counts as $action => $n){{ $n }} {{ Str::lower(\UniqueWorkbench\Importer\RowOutcome::ACTIONS[$action] ?? $action) }}@if (! $loop->last), @endif @endforeach
+                                    · @foreach ($run->counts as $action => $n){{ \UniqueWorkbench\Importer\RowOutcome::countLabel($action, $n) }}@if (! $loop->last), @endif @endforeach
                                 @endif
                             </p>
                         </div>
